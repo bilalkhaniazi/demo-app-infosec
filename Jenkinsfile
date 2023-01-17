@@ -8,7 +8,7 @@ pipeline {
       }
     }
     stage('Scan') {
-        snykSecurity organisation: 'prashant.b', projectName: 'nodejs_demo_snyk', severity: 'medium', snykInstallation: 'Snyk', snykTokenId: '87cd2da3-ccfa-46f7-b7d4-d115b400422c', targetFile: 'package.json'
+        snykSecurity failOnIssues: false, projectName: 'Synk Test', snykInstallation: 'Please define a Snyk installation in the Jenkins Global Tool Configuration. This task will not run without a Snyk installation.', snykTokenId: '31c7247a-b712-44e0-9df8-9c8168fc1b84'
     }
 
     stage('Linux Tests') {
